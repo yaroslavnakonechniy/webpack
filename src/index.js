@@ -5,4 +5,4 @@ const image = document.createElement('img');
 image.src = img;
 document.body.append(image);
 
-console.log('hello hello hello');
+console.log('hello hello');
