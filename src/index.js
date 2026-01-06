@@ -9,3 +9,10 @@ image.src = img;
 document.body.append(image);
 
 console.log('hello hello');
+
+//для перевірки чи працює babel
+async function fetchData() {
+    const response = await new Promise(resolve => setTimeout(() => resolve("Дані отримано!"), 1000));
+    console.log(response);
+}
+fetchData();

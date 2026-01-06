@@ -62,6 +62,16 @@ module.exports = {
                 exclude: /node_modules/,
             },
             {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
+                }
+            },
+            {
                 test: /\.(png|svg|jpg|jpeg|gif|webp)$/i, // Правило для зображень
                 type: 'asset/resource', // Генерує URL та виводить файл у директорію
                 generator: {
