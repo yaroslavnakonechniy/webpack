@@ -16,3 +16,6 @@ async function fetchData() {
     console.log(response);
 }
 fetchData();
+
+//для перевірки eslintrc
+const myVariable = 42; // Ця змінна не використовується (помилка no-unused-vars)
