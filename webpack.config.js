@@ -8,6 +8,12 @@ module.exports = {
         main: './src/index.js',
         vendor: './src/vendor.js',
     },
+    devServer: {
+        static: './dist',
+        port: 3000,
+        open: true,
+        hot: true
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'js/[name].[contenthash].js',
