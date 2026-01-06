@@ -1,6 +1,7 @@
 import './css/style.css';
 import './sass/style.scss';
 //import './less/style.less';
+import './ts/index.ts';
 import img from '../src/img/chery.jpg';
 
 const image = document.createElement('img');

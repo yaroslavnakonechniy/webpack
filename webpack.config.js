@@ -28,6 +28,9 @@ module.exports = {
         new CleanWebpackPlugin()
 
     ],
+    resolve: {
+        extensions: ['.ts', '.js'],
+    },
     module: {
         rules: [
             {
@@ -52,6 +55,11 @@ module.exports = {
                     'css-loader', 
                     'less-loader'
                 ],
+            },
+            {
+                test: /\.ts$/,
+                use: 'ts-loader',
+                exclude: /node_modules/,
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif|webp)$/i, // Правило для зображень
