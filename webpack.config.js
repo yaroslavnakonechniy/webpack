@@ -6,13 +6,12 @@ module.exports = {
     mode: 'development',
     entry: {
         main: './src/index.js',
-        vendor: './src/vendor.js',
+        //vendor: './src/vendor.js',
     },
     devServer: {
-        static: './dist',
+        static: path.join(__dirname, 'dist'),
+        compress: true,
         port: 3000,
-        open: true,
-        hot: true
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -32,11 +31,27 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.css$/,
+                test: /\.css$/, 
                 use: [
-                    'style-loader',
+                    'style-loader', 
                     'css-loader'
-                ]
+                ],
+            },
+            {
+                test: /\.scss$/, 
+                use: [
+                    'style-loader', 
+                    'css-loader', 
+                    'sass-loader' 
+                ],
+            },
+            {
+                test: /\.less$/, 
+                use: [
+                    'style-loader', 
+                    'css-loader', 
+                    'less-loader'
+                ],
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif|webp)$/i, // Правило для зображень
